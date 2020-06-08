@@ -1,7 +1,9 @@
 package com.msr.edu.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.msr.edu.entity.Teacher;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.msr.edu.query.TeacherQuery;
 
 /**
  * <p>
@@ -11,6 +13,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author tom
  * @since 2020-06-05
  */
-public interface TeacherService extends IService<Teacher> {
 
+public interface TeacherService extends IService<Teacher> {
+    //条件分页
+    void pageQuery(Page<Teacher> pageParam , TeacherQuery teacherQuery);  //分页对象，查询对象
 }
